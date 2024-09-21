@@ -31,8 +31,8 @@ class Bank:
 
 if __name__ == "__main__":
     bk = Bank()
-    th1 = threading.Thread(target=bk.deposit, args=(bk,))
-    th2 = threading.Thread(target=bk.take, args=(bk,))
+    th1 = threading.Thread(target=Bank.deposit, args=(bk,))
+    th2 = threading.Thread(target=Bank.take, args=(bk,))
 
     th1.start()
     th2.start()
